@@ -1,0 +1,51 @@
+image: docker:19.03.0
+services:
+  - docker:19.03.0-dind
+stages:
+  - build-binary
+  - build-image
+  - deploy
+
+before_script:
+  - IMAGE_NAME=project-internal
+
+build-binary:
+  stage: build-binary
+  image: golang:1.13.5-alpine3.11
+  only:
+    - master
+    - dev
+    - sandbox
+  script:
+    - apk add git musl-dev gcc
+    - go build -o app/$IMAGE_NAME
+    - ls -R -la
+  artifacts:
+    paths:
+      - app
+    expire_in: 1 day
+
+build-image:
+  stage: build-image
+  image: docker:19.03.5
+  script:
+    - rm -f Dockerfile
+    - rm -rf .git
+    - echo 'FROM alpine' >> Dockerfile
+    - echo 'RUN apk add tzdata ca-certificates' >> Dockerfile
+    - echo 'ENV SOURCES /src' >> Dockerfile
+    - echo 'WORKDIR ${SOURCES}' >> Dockerfile
+    - echo 'COPY . ${SOURCES}' >> Dockerfile
+    - echo 'ENV APPLICATION_ENV' $CI_COMMIT_REF_NAME >> Dockerfile
+    - echo 'ENTRYPOINT ["/src/app/'${IMAGE_NAME}'"]' >> Dockerfile
+
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - ls -R -l
+    - docker build -t $CI_REGISTRY_IMAGE/$IMAGE_NAME:$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA .
+    - docker push $CI_REGISTRY_IMAGE/$IMAGE_NAME:$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA
+
+trigger_build:
+  stage: deploy
+  script:
+    - apk add curl
+    - curl -X POST -F token=384818ff8f5e9ede3e948593a90dba -F ref=$CI_COMMIT_REF_NAME -F "variables[PROJECT_NAME]=$IMAGE_NAME" -F "variables[IMAGE_TAG]=$CI_COMMIT_SHORT_SHA" -F "variables[REF_NAME]=$CI_COMMIT_REF_NAME" https://gitlab.com/api/v4/projects/21194820/trigger/pipeline
