@@ -1,0 +1,8 @@
+/debug
+/.idea
+/.vscode
+/vendor
+/go.sum
+/config/local
+/project-internal
+/.DS_Store

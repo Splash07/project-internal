@@ -1,0 +1,219 @@
+# MASTER DATA V2
+# bank
+masterdata_bank_v2:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/bank
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_banks_v2:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/banks
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_bank_v2_add:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/bank/add
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_bank_v2_remove:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/bank/remove
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_bank_v2_update:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/bank/update
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_bank_v2_switch_status:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/bank/switch-status
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+
+# province
+masterdata_provinces_v2_all:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/provinces/v2
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_province_v2_by_id:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/province/v2
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_province_v2_detail_by_id:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/province/detail-v2
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_province_v2_add:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/province/add-v2
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_province_v2_update:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/province/update-v2
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_province_v2_remove:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/province/remove-v2
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_province_v2_switch_status:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/province/switch-status
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+
+# district
+masterdata_districts_v2_by_province_id:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/districts/v2
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_district_v2_by_id:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/district/v2
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_district_v2_detail_by_id:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/district/detail-v2
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_district_v2_add:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/district/add-v2
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_district_v2_update:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/district/update-v2
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_district_v2_remove:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/district/remove-v2
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_district_v2_switch_status:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/district/switch-status
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+
+# ward
+masterdata_wards_v2_by_district_id:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/wards/v2
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_ward_v2_by_code:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/ward/v2
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_ward_v2_detail_by_code:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/ward/detail-v2
+  method: GET
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_ward_v2_add:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/ward/add-v2
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_ward_v2_update:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/ward/update-v2
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_ward_v2_remove:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/ward/remove-v2
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+masterdata_ward_v2_switch_status:
+  url: https://team7.baitapcuoikhoa.xyz/meta-data/api/v2/ward/switch-status
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: online
+    password: I5S{g~~u2;
+

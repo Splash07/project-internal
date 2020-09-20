@@ -1,0 +1,16 @@
+'online':
+  name: "online"
+  connection-type: "tcp"
+  address: "35.240.191.28:6379"
+  password: "goda_staging"
+  dbnum: 0
+  timeout: 2
+  pool-limit: 10
+'internal':
+  name: "internal"
+  connection-type: "tcp"
+  address: "35.240.191.28:6379"
+  password: "goda_staging"
+  dbnum: 0
+  timeout: 2
+  pool-limit: 10
